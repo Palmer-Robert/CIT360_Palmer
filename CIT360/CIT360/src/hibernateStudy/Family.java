@@ -3,54 +3,90 @@ package hibernateStudy;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+
+
 @Entity
 public class Family {
-	
-	private int employeeId;
-	private String empFirstname;
-	private String empLastname;
-	
-	
-	
-	
-	/**
-	 * @return the employeeId
-	 */
-	@Id
-	public int getEmployeeId() {
-		return employeeId;
-	}
-	/**
-	 * @param employeeId the employeeId to set
-	 */
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
-	}
-	/**
-	 * @return the empFirstname
-	 */
-	public String getEmpFirstname() {
-		return empFirstname;
-	}
-	/**
-	 * @param empFirstname the empFirstname to set
-	 */
-	public void setEmpFirstname(String empFirstname) {
-		this.empFirstname = empFirstname;
-	}
-	/**
-	 * @return the empLastname
-	 */
-	public String getEmpLastname() {
-		return empLastname;
-	}
-	/**
-	 * @param empLastname the empLastname to set
-	 */
-	public void setEmpLastname(String empLastname) {
-		this.empLastname = empLastname;
-	}
-	
-	
 
+	@Id
+	private int memberId;
+	private String firstName;
+	private String lastName;
+	
+	
+	/**
+	 * No argument constructor
+	 */
+	public Family() {
+	}
+
+
+	/**
+	 * @param firstName
+	 * @param lastName
+	 */
+	public Family(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+
+	/**
+	 * @return the memberId
+	 */
+	public int getMemberId() {
+		return memberId;
+	}
+
+
+	/**
+	 * @param memberId the memberId to set
+	 */
+	public void setMemberId(int memberId) {
+		this.memberId = memberId;
+	}
+
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Family [memberId=" + memberId + ", firstName=" + firstName
+				+ ", lastName=" + lastName + "]";
+	}
+	
+	
 }
