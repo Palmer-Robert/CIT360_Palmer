@@ -3,7 +3,6 @@ package hibernateStudy;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.*;
 
 public class FamilyTest {
 
@@ -39,6 +38,5 @@ public class FamilyTest {
 			factory.close();
 		}
 	}
-	
 }
 		
